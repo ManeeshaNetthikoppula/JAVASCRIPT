@@ -47,9 +47,13 @@ console.log(age);
 console.log(price);
 console.log(typeof age);*/
  //2.String
-let name = "Maneesha";
+/*let name = "Maneesha";
 let message = "Welcome to JavaScript";
 console.log(name);
 console.log(message);
-console.log(typeof name);
-
+console.log(typeof name);*/
+ // 3. Boolean
+let isStudent = true;
+let isLoggedIn = false;
+console.log(isStudent);
+console.log(typeof isStudent);
