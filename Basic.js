@@ -41,8 +41,15 @@ console.log("percentile:",result);*/
 
 //Data Types
 // 1. Number
-let age = 20;
+/*let age = 20;
 let price  = 99.99;
 console.log(age);
 console.log(price);
-console.log(typeof age);
+console.log(typeof age);*/
+ //2.String
+let name = "Maneesha";
+let message = "Welcome to JavaScript";
+console.log(name);
+console.log(message);
+console.log(typeof name);
+
