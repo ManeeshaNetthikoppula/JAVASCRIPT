@@ -64,8 +64,14 @@ console.log(result);
 console.log(typeof result);*/
 
 // 5. Null
-let data = null;
+/*let data = null;
 console.log(data);
-console.log(typeof data);
+console.log(typeof data);*/
+
+// 6.BigInt
+let bigNumber = 12345678901234567890n;
+console.log(bigNumber);
+console.log(typeof bigNumber);
+
 
 
