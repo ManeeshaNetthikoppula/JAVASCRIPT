@@ -37,3 +37,12 @@ console.log("Division:", result);*/
 let num2 = 10;
 let result = (10 % 100);
 console.log("percentile:",result);*/
+
+
+//Data Types
+// 1. Number
+let age = 20;
+let price  = 99.99;
+console.log(age);
+console.log(price);
+console.log(typeof age);
