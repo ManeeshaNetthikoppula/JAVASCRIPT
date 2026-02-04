@@ -53,7 +53,13 @@ console.log(name);
 console.log(message);
 console.log(typeof name);*/
  // 3. Boolean
-let isStudent = true;
+/*let isStudent = true;
 let isLoggedIn = false;
 console.log(isStudent);
-console.log(typeof isStudent);
+console.log(typeof isStudent);*/
+
+// 4. Undefined
+let result;
+console.log(result);
+console.log(typeof result);
+
