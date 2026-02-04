@@ -59,7 +59,13 @@ console.log(isStudent);
 console.log(typeof isStudent);*/
 
 // 4. Undefined
-let result;
+/*let result;
 console.log(result);
-console.log(typeof result);
+console.log(typeof result);*/
+
+// 5. Null
+let data = null;
+console.log(data);
+console.log(typeof data);
+
 
