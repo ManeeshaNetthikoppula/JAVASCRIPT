@@ -98,10 +98,14 @@ console.log(typeof greet);*/
 
 // control flow
 // 1. if statement
-let num = 10;
+/*let num = 10;
 if(num > 0){
     console.log("Number is Positive");
+}*/
+// 2. if else
+let number =7;
+if(number % 2 ===0){
+console.log("Even number");
+}else{
+    console.log("odd number");
 }
-
-
-
