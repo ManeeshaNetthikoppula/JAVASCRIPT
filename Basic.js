@@ -73,10 +73,18 @@ console.log(typeof data);*/
 console.log(bigNumber);
 console.log(typeof bigNumber);*/
 // 7.symbol
-let id1 = Symbol("id");
+/*let id1 = Symbol("id");
 let id2 = Symbol("id");
 console.log(id1 === id2);
-console.log(typeof id1);
+console.log(typeof id1);*/
+// 8.Object 
+let student = {
+    name:"Maneesha",
+    age : 20,
+    isStudent: true
+};
+console.log(student.name);
+console.log(typeof student);
 
 
 
