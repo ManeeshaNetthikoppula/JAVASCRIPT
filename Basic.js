@@ -86,9 +86,15 @@ console.log(typeof id1);*/
 console.log(student.name);
 console.log(typeof student);*/
 // 9.Array
-let marks = [85,90,78,92];
+/*let marks = [85,90,78,92];
 console.log(marks[0]);
-console.log(typeof marks);
+console.log(typeof marks);*/
+ // 10.Function
+function greet(){
+    console.log("Hello");
+}
+greet();
+console.log(typeof greet);
 
 
 
