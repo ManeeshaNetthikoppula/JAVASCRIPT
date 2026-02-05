@@ -69,9 +69,14 @@ console.log(data);
 console.log(typeof data);*/
 
 // 6.BigInt
-let bigNumber = 12345678901234567890n;
+/*let bigNumber = 12345678901234567890n;
 console.log(bigNumber);
-console.log(typeof bigNumber);
+console.log(typeof bigNumber);*/
+// 7.symbol
+let id1 = Symbol("id");
+let id2 = Symbol("id");
+console.log(id1 === id2);
+console.log(typeof id1);
 
 
 
