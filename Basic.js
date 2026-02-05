@@ -90,11 +90,18 @@ console.log(typeof student);*/
 console.log(marks[0]);
 console.log(typeof marks);*/
  // 10.Function
-function greet(){
+/*function greet(){
     console.log("Hello");
 }
 greet();
-console.log(typeof greet);
+console.log(typeof greet);*/
+
+// control flow
+// 1. if statement
+let num = 10;
+if(num > 0){
+    console.log("Number is Positive");
+}
 
 
 
