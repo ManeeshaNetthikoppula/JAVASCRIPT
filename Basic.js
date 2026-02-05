@@ -78,13 +78,17 @@ let id2 = Symbol("id");
 console.log(id1 === id2);
 console.log(typeof id1);*/
 // 8.Object 
-let student = {
+/*let student = {
     name:"Maneesha",
     age : 20,
     isStudent: true
 };
 console.log(student.name);
-console.log(typeof student);
+console.log(typeof student);*/
+// 9.Array
+let marks = [85,90,78,92];
+console.log(marks[0]);
+console.log(typeof marks);
 
 
 
