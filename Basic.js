@@ -103,9 +103,18 @@ if(num > 0){
     console.log("Number is Positive");
 }*/
 // 2. if else
-let number =7;
+/*let number =7;
 if(number % 2 ===0){
 console.log("Even number");
 }else{
     console.log("odd number");
+}*/
+// 3.if else if else
+let a = 10, b = 25, c = 15;
+if(a > b && a > c){
+    console.log("A is largest");
+} else if(b > a && b > c){
+    console.log("B is largest");
+} else{
+    console.log("C is largest");
 }
