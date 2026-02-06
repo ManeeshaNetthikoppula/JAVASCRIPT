@@ -110,11 +110,27 @@ console.log("Even number");
     console.log("odd number");
 }*/
 // 3.if else if else
-let a = 10, b = 25, c = 15;
+/*let a = 10, b = 25, c = 15;
 if(a > b && a > c){
     console.log("A is largest");
 } else if(b > a && b > c){
     console.log("B is largest");
 } else{
     console.log("C is largest");
+}*/
+
+// 4. Switch Statement
+let day = 3;
+switch(day){
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    default:
+        console("Invalid day");
 }
