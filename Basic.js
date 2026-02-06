@@ -140,9 +140,15 @@ switch(day){
     console.log(i);
 }*/
 // 6. while Loop
-let i =5;
+/*let i =5;
 while(i >= 1);{
 console.log(i);
 i--;
+}*/
+// 7.do while loop
+let i = 1;
+do {
+    console.log(i);
+    i++;
 }
-
+while(i <=5);
