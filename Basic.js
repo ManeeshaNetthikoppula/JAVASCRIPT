@@ -146,9 +146,33 @@ console.log(i);
 i--;
 }*/
 // 7.do while loop
-let i = 1;
+/*let i = 1;
 do {
     console.log(i);
     i++;
 }
-while(i <=5);
+while(i <=5);*/
+
+// 8. break Statement
+/*for(let i = 1; i <= 5; i++){
+    if(i ===3){
+        break;
+    }
+    console.log(i);
+}*/
+
+// 9. continue statement
+/*for(let i = 1;i <=5;i++){
+    if(i === 3){
+        continue;
+    }
+    console.log(i);
+}*/
+// 10. Nested loop
+/*for( let i =1;i <= 3; i++){
+    let row = "";
+    for(let j = 1;j <= i; j++){
+        row += "*";
+    }
+    console.log(row);
+}*/
