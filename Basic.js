@@ -120,7 +120,7 @@ if(a > b && a > c){
 }*/
 
 // 4. Switch Statement
-let day = 3;
+/*let day = 3;
 switch(day){
     case 1:
         console.log("Monday");
@@ -133,4 +133,9 @@ switch(day){
         break;
     default:
         console("Invalid day");
+}*/
+
+// 5. for loop
+for(let i = 1; i <= 5; i++){
+    console.log(i);
 }
