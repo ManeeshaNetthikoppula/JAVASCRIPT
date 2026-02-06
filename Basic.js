@@ -136,6 +136,13 @@ switch(day){
 }*/
 
 // 5. for loop
-for(let i = 1; i <= 5; i++){
+/*for(let i = 1; i <= 5; i++){
     console.log(i);
+}*/
+// 6. while Loop
+let i =5;
+while(i >= 1);{
+console.log(i);
+i--;
 }
+
