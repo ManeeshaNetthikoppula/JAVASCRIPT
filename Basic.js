@@ -169,10 +169,16 @@ while(i <=5);*/
     console.log(i);
 }*/
 // 10. Nested loop
-for( let i =1;i <= 3; i++){
+/*for( let i =1;i <= 3; i++){
     let row = "";
     for(let j = 1;j <= i; j++){
         row += "*";
     }
     console.log(row);
+}*/
+// FUNCTIONS
+// 1.Simple Function(No Parameters)
+function sayHello(){
+    console.log("Hello! Welcome to JS");
 }
+sayHello();
