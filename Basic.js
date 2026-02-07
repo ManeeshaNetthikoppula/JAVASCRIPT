@@ -178,7 +178,13 @@ while(i <=5);*/
 }*/
 // FUNCTIONS
 // 1.Simple Function(No Parameters)
-function sayHello(){
+/*function sayHello(){
     console.log("Hello! Welcome to JS");
 }
-sayHello();
+sayHello();*/
+// Function with Parameters
+function greet(name){
+    console.log ("Hello " + name);
+}
+greet("Maneesha");
+greet("Akshaya");
