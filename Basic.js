@@ -189,8 +189,14 @@ sayHello();*/
 greet("Maneesha");
 greet("Akshaya");*/
 // 3. Function with Return Value
-function add(a,b){
+/*function add(a,b){
 return a + b;
 }
 let result = add(5,3);
-console.log("Sum is :",result);
+console.log("Sum is :",result);*/
+// i> Find Square of a Number
+function square(num){
+    return num *num;
+}
+console.log(square(4));
+
