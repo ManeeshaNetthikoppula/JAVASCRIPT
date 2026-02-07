@@ -194,9 +194,20 @@ return a + b;
 }
 let result = add(5,3);
 console.log("Sum is :",result);*/
-// i> Find Square of a Number
-function square(num){
+// i) Find Square of a Number
+/*function square(num){
     return num *num;
 }
-console.log(square(4));
+console.log(square(4));*/
+// ii) Check Even or odd
+function isEven(num){
+    if(num % 2 === 0){
+        return "Even";
+    }
+    else{
+        return "Odd";
+    }
+}
+console.log(isEven(10));
+console.log(isEven(7));
 
