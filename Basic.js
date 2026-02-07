@@ -183,8 +183,14 @@ while(i <=5);*/
 }
 sayHello();*/
 // Function with Parameters
-function greet(name){
+/*function greet(name){
     console.log ("Hello " + name);
 }
 greet("Maneesha");
-greet("Akshaya");
+greet("Akshaya");*/
+// 3. Function with Return Value
+function add(a,b){
+return a + b;
+}
+let result = add(5,3);
+console.log("Sum is :",result);
