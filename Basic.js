@@ -200,7 +200,7 @@ console.log("Sum is :",result);*/
 }
 console.log(square(4));*/
 // ii) Check Even or odd
-function isEven(num){
+/*function isEven(num){
     if(num % 2 === 0){
         return "Even";
     }
@@ -209,5 +209,16 @@ function isEven(num){
     }
 }
 console.log(isEven(10));
-console.log(isEven(7));
+console.log(isEven(7));*/
+
+// iii) Find Largest of Two Numbers
+function findMax(a,b){
+    if(a>b){
+        return a;
+    }
+    else{
+        return b;
+    }
+}
+console.log(findMax(10,25));
 
