@@ -212,7 +212,7 @@ console.log(isEven(10));
 console.log(isEven(7));*/
 
 // iii) Find Largest of Two Numbers
-function findMax(a,b){
+/*function findMax(a,b){
     if(a>b){
         return a;
     }
@@ -220,5 +220,15 @@ function findMax(a,b){
         return b;
     }
 }
-console.log(findMax(10,25));
+console.log(findMax(10,25));*/
+// 7. Function to calculate Factorial
+ function factorial(n){
+    let fact = 1;
+    for(let i = 1;i <= n; i++){
+        fact *= i;
+    }
+    return fact;
+ }
+ console.log(factorial(5));
+
 
