@@ -236,7 +236,7 @@ console.log(findMax(10,25));*/
  };
  console.log(multiply(4,6));*/
  // 9. Function to count Vowels in a String
- function countVowels(str){
+ /*function countVowels(str){
     let count = 0;
     let vowels = "aeiouAEIOU";
     for(let char of str){
@@ -246,5 +246,17 @@ console.log(findMax(10,25));*/
     }
     return count;
  }
-console.log(countVowels("Maneesha"));
+console.log(countVowels("Maneesha"));*/
+// 10. Function calling Another Function
+function double(num){
+    return num * 2;
+}
+function triple(num){
+    return num * 3;
+}
+function calculate(num){
+    console.log("Double:",double(num));
+    console.log("Triple:", triple(num));
+}
+calculate(5);
 
