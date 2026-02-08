@@ -222,13 +222,18 @@ console.log(isEven(7));*/
 }
 console.log(findMax(10,25));*/
 // 7. Function to calculate Factorial
- function factorial(n){
+ /*function factorial(n){
     let fact = 1;
     for(let i = 1;i <= n; i++){
         fact *= i;
     }
     return fact;
  }
- console.log(factorial(5));
+ console.log(factorial(5));*/
+ // 8. Arrow Function
+ const multiply = (a,b) => {
+    return a * b;
+ };
+ console.log(multiply(4,6));
 
 
