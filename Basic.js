@@ -231,9 +231,20 @@ console.log(findMax(10,25));*/
  }
  console.log(factorial(5));*/
  // 8. Arrow Function
- const multiply = (a,b) => {
+ /*const multiply = (a,b) => {
     return a * b;
  };
- console.log(multiply(4,6));
-
+ console.log(multiply(4,6));*/
+ // 9. Function to count Vowels in a String
+ function countVowels(str){
+    let count = 0;
+    let vowels = "aeiouAEIOU";
+    for(let char of str){
+        if(vowels.includes(char)){
+            count++;
+        }
+    }
+    return count;
+ }
+console.log(countVowels("Maneesha"));
 
