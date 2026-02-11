@@ -278,12 +278,17 @@ console.log(reverseString("hello"));*/
 console.log(isPalindrome("madam"));
 console.log(isPalindrome("hello"));*/
 // Find Sum of Array Elements
-function sumArray(arr){
+/*function sumArray(arr){
     let sum = 0;
     for(let num of arr){
         sum +=num;
     }
     return sum;
 }
-console.log(sumArray([1,2,3,4]));
+console.log(sumArray([1,2,3,4]));*/
+// Find Largest number in an Array
+function findLargest(arr){
+    return Math.max(...arr);
+}
+console.log(findLargest([10,45,2,99,23]));
 
