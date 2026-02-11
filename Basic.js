@@ -271,10 +271,19 @@ console.log(celsiusToFahrenheit(30));*/
 }
 console.log(reverseString("hello"));*/
 // check palindrome
-function isPalindrome(str){
+/*function isPalindrome(str){
     let reversed = str.split("").reverse().join("");
     return str === reversed;
 }
 console.log(isPalindrome("madam"));
-console.log(isPalindrome("hello"));
+console.log(isPalindrome("hello"));*/
+// Find Sum of Array Elements
+function sumArray(arr){
+    let sum = 0;
+    for(let num of arr){
+        sum +=num;
+    }
+    return sum;
+}
+console.log(sumArray([1,2,3,4]));
 
