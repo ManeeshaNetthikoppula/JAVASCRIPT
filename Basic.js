@@ -287,8 +287,12 @@ console.log(isPalindrome("hello"));*/
 }
 console.log(sumArray([1,2,3,4]));*/
 // Find Largest number in an Array
-function findLargest(arr){
+/*function findLargest(arr){
     return Math.max(...arr);
 }
-console.log(findLargest([10,45,2,99,23]));
-
+console.log(findLargest([10,45,2,99,23]));*/
+// count words in a sentence
+function countWords(sentence){
+    return sentence.trim().split(" ").length;
+}
+console.log(countWords("JavaScript is very powerful"));
