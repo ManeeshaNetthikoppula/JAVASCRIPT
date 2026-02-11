@@ -266,8 +266,15 @@ calculate(5);*/
 }
 console.log(celsiusToFahrenheit(30));*/
 // 12. reverse a String
-function reverseString(str){
+/*function reverseString(str){
     return str.split("").reverse().join("");
 }
-console.log(reverseString("hello"));
+console.log(reverseString("hello"));*/
+// check palindrome
+function isPalindrome(str){
+    let reversed = str.split("").reverse().join("");
+    return str === reversed;
+}
+console.log(isPalindrome("madam"));
+console.log(isPalindrome("hello"));
 
