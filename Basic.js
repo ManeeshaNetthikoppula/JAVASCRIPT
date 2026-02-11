@@ -248,7 +248,7 @@ console.log(findMax(10,25));*/
  }
 console.log(countVowels("Maneesha"));*/
 // 10. Function calling Another Function
-function double(num){
+/*function double(num){
     return num * 2;
 }
 function triple(num){
@@ -258,5 +258,11 @@ function calculate(num){
     console.log("Double:",double(num));
     console.log("Triple:", triple(num));
 }
-calculate(5);
+calculate(5);*/
+
+// 11. convert the celsius to fahrenheit
+function celsiusToFahrenheit(c){
+    return(c * 9/5)+32;
+}
+console.log(celsiusToFahrenheit(30));
 
