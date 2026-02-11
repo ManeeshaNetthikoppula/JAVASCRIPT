@@ -261,8 +261,13 @@ function calculate(num){
 calculate(5);*/
 
 // 11. convert the celsius to fahrenheit
-function celsiusToFahrenheit(c){
+/*function celsiusToFahrenheit(c){
     return(c * 9/5)+32;
 }
-console.log(celsiusToFahrenheit(30));
+console.log(celsiusToFahrenheit(30));*/
+// 12. reverse a String
+function reverseString(str){
+    return str.split("").reverse().join("");
+}
+console.log(reverseString("hello"));
 
