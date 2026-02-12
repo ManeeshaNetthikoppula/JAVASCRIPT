@@ -302,7 +302,7 @@ console.log(countWords("JavaScript is very powerful"));*/
 }
 console.log(randomBetween(1,10));*/
 // Check is a number is Prime
-function isPrime(num){
+/*function isPrime(num){
     if(num <= 1) return false;
     for(let i = 2; i<num; i++){
         if(num%i ===0) return false;
@@ -310,4 +310,10 @@ function isPrime(num){
     return true;
 }
 console.log(isPrime(7));
-console.log(isPrime(10));
+console.log(isPrime(10));*/
+// Find Factorial using Recursion
+function factorial(n){
+    if(n===0) return 1;
+    return n * factorial(n-1);
+}
+console.log(factorial(5));
