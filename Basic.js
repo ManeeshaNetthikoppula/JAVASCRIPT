@@ -297,7 +297,17 @@ console.log(findLargest([10,45,2,99,23]));*/
 }
 console.log(countWords("JavaScript is very powerful"));*/
 // Generate Random number between two values
-function randomBetween(min,max){
+/*function randomBetween(min,max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-console.log(randomBetween(1,10));
+console.log(randomBetween(1,10));*/
+// Check is a number is Prime
+function isPrime(num){
+    if(num <= 1) return false;
+    for(let i = 2; i<num; i++){
+        if(num%i ===0) return false;
+    }
+    return true;
+}
+console.log(isPrime(7));
+console.log(isPrime(10));
