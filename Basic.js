@@ -292,7 +292,12 @@ console.log(sumArray([1,2,3,4]));*/
 }
 console.log(findLargest([10,45,2,99,23]));*/
 // count words in a sentence
-function countWords(sentence){
+/*function countWords(sentence){
     return sentence.trim().split(" ").length;
 }
-console.log(countWords("JavaScript is very powerful"));
+console.log(countWords("JavaScript is very powerful"));*/
+// Generate Random number between two values
+function randomBetween(min,max){
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+console.log(randomBetween(1,10));
