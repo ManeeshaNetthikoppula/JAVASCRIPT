@@ -312,8 +312,16 @@ console.log(randomBetween(1,10));*/
 console.log(isPrime(7));
 console.log(isPrime(10));*/
 // Find Factorial using Recursion
-function factorial(n){
+/*function factorial(n){
     if(n===0) return 1;
     return n * factorial(n-1);
 }
-console.log(factorial(5));
+console.log(factorial(5));*/
+// Capitalize first letter of each word
+function CapitalizeWords(str){
+    return str
+    .split(" ")
+    .map(word=>word.charAt(0).toUpperCase()+word.slice(1))
+    .join(" ");
+}
+console.log(CapitalizeWords("javascript is fun"));
