@@ -344,11 +344,20 @@ console.log(removeDuplicates([1,2,2,3,4,4]));*/
 }
 console.log(areAnagrams("listen","silent"));*/
 // Fibonacci Series
-function fibonacci(n){
+/*function fibonacci(n){
     let series = [0,1];
     for(let i =2; i < n; i++){
         series[i] = series[i-1]+ series[i - 2];
     }
     return series.slice(0,n);
 }
-console.log(fibonacci(7));
+console.log(fibonacci(7));*/
+//Count Frequency of elements in Array
+function frequencyCount(arr){
+    let freq = {};
+    for(let item of arr){
+        freq [item] = (freq[item] || 0) + 1;
+    }
+    return freq;
+}
+console.log(frequencyCount([1,2,2,3,3,3]));
