@@ -353,11 +353,17 @@ console.log(areAnagrams("listen","silent"));*/
 }
 console.log(fibonacci(7));*/
 //Count Frequency of elements in Array
-function frequencyCount(arr){
+/*function frequencyCount(arr){
     let freq = {};
     for(let item of arr){
         freq [item] = (freq[item] || 0) + 1;
     }
     return freq;
 }
-console.log(frequencyCount([1,2,2,3,3,3]));
+console.log(frequencyCount([1,2,2,3,3,3]));*/
+function findMissing(arr,n){
+    let expectedSum = (n *(n+1))/2;
+    let actualSum = arr.reduce((a,b) => a +b,0);
+    return expectedSum - actualSum;
+}
+console.log(findMissing([1,2,4,5],5));
