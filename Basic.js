@@ -337,9 +337,18 @@ console.log(CapitalizeWords("javascript is fun"));*/
 }
 console.log(removeDuplicates([1,2,2,3,4,4]));*/
 //Check Two Strings are Anagrams
-function areAnagrams(str1,str2){
+/*function areAnagrams(str1,str2){
     let s1 = str1.toLowerCase().split("").sort().join("");
     let s2 = str2.toLowerCase().split("").sort().join("");
     return s1 === s2;
 }
-console.log(areAnagrams("listen","silent"));
+console.log(areAnagrams("listen","silent"));*/
+// Fibonacci Series
+function fibonacci(n){
+    let series = [0,1];
+    for(let i =2; i < n; i++){
+        series[i] = series[i-1]+ series[i - 2];
+    }
+    return series.slice(0,n);
+}
+console.log(fibonacci(7));
