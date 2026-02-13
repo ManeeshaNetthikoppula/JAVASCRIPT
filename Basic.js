@@ -326,7 +326,7 @@ console.log(factorial(5));*/
 }
 console.log(CapitalizeWords("javascript is fun"));*/
 // Remove Duplicates from an Array
-function removeDuplicates(arr){
+/*function removeDuplicates(arr){
     let result = [];
     for (let i = 0;i < arr.length;i++){
         if(!result.includes(arr[i])){
@@ -335,4 +335,11 @@ function removeDuplicates(arr){
     }
     return result;
 }
-console.log(removeDuplicates([1,2,2,3,4,4]));
+console.log(removeDuplicates([1,2,2,3,4,4]));*/
+//Check Two Strings are Anagrams
+function areAnagrams(str1,str2){
+    let s1 = str1.toLowerCase().split("").sort().join("");
+    let s2 = str2.toLowerCase().split("").sort().join("");
+    return s1 === s2;
+}
+console.log(areAnagrams("listen","silent"));
