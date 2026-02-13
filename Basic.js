@@ -318,10 +318,21 @@ console.log(isPrime(10));*/
 }
 console.log(factorial(5));*/
 // Capitalize first letter of each word
-function CapitalizeWords(str){
+/*function CapitalizeWords(str){
     return str
     .split(" ")
     .map(word=>word.charAt(0).toUpperCase()+word.slice(1))
     .join(" ");
 }
-console.log(CapitalizeWords("javascript is fun"));
+console.log(CapitalizeWords("javascript is fun"));*/
+// Remove Duplicates from an Array
+function removeDuplicates(arr){
+    let result = [];
+    for (let i = 0;i < arr.length;i++){
+        if(!result.includes(arr[i])){
+            result.push(arr[i]);
+        }
+    }
+    return result;
+}
+console.log(removeDuplicates([1,2,2,3,4,4]));
