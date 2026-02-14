@@ -361,9 +361,25 @@ console.log(fibonacci(7));*/
     return freq;
 }
 console.log(frequencyCount([1,2,2,3,3,3]));*/
-function findMissing(arr,n){
+/* function findMissing(arr,n){
     let expectedSum = (n *(n+1))/2;
     let actualSum = arr.reduce((a,b) => a +b,0);
     return expectedSum - actualSum;
 }
-console.log(findMissing([1,2,4,5],5));
+console.log(findMissing([1,2,4,5],5));*/
+// Group array of objects by property
+function groupByCategory(items){
+    return items.reduce((acc,item) =>{
+        if(!acc[item.category]){
+            acc[item.category] = [];
+        }
+        acc[item.category].push(item);
+        return acc;
+        },{});
+    }
+    const products = [
+        {name:"shirt",category:"Clothes"},
+        {name: "Jeans",category: "Clothes"},
+        {name: "Mobile", category: "Electronics"}
+    ];
+    console.log(groupByCategory(products));
