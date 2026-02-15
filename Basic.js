@@ -399,9 +399,9 @@ console.log(findMissing([1,2,4,5],5));*/
 }
 console.log(flattenArray([1,[2,[3,4]],5]));*/
 // Deep Clone an Object
-function deepClone(obj){
+/* function deepClone(obj){
     return JSON.parse(JSON.stringify(obj));
 }
 let original = {name: "Maneesha",details: { age:21}};
 let copy = deepClone(original);
-console.log(copy);
+console.log(copy);*/
