@@ -368,7 +368,7 @@ console.log(frequencyCount([1,2,2,3,3,3]));*/
 }
 console.log(findMissing([1,2,4,5],5));*/
 // Group array of objects by property
-function groupByCategory(items){
+/*function groupByCategory(items){
     return items.reduce((acc,item) =>{
         if(!acc[item.category]){
             acc[item.category] = [];
@@ -382,4 +382,14 @@ function groupByCategory(items){
         {name: "Jeans",category: "Clothes"},
         {name: "Mobile", category: "Electronics"}
     ];
-    console.log(groupByCategory(products));
+    console.log(groupByCategory(products));*/
+// Debounce function
+function Debounce(func,delay){
+    let timer;
+    return function(...args){
+        clearTimeout(timer);
+        timer = setTimeout(()=>{
+            func.apply(this,args);
+        },delay);
+    };
+}
