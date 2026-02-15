@@ -384,7 +384,7 @@ console.log(findMissing([1,2,4,5],5));*/
     ];
     console.log(groupByCategory(products));*/
 // Debounce function
-function Debounce(func,delay){
+/*function Debounce(func,delay){
     let timer;
     return function(...args){
         clearTimeout(timer);
@@ -392,4 +392,9 @@ function Debounce(func,delay){
             func.apply(this,args);
         },delay);
     };
+}*/
+// 9 Flattened Nested Arrray
+function flattenArray(arr){
+    return arr.flat(Infinity);
 }
+console.log(flattenArray([1,[2,[3,4]],5]));
