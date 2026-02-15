@@ -394,7 +394,14 @@ console.log(findMissing([1,2,4,5],5));*/
     };
 }*/
 // 9 Flattened Nested Arrray
-function flattenArray(arr){
+/*function flattenArray(arr){
     return arr.flat(Infinity);
 }
-console.log(flattenArray([1,[2,[3,4]],5]));
+console.log(flattenArray([1,[2,[3,4]],5]));*/
+// Deep Clone an Object
+function deepClone(obj){
+    return JSON.parse(JSON.stringify(obj));
+}
+let original = {name: "Maneesha",details: { age:21}};
+let copy = deepClone(original);
+console.log(copy);
