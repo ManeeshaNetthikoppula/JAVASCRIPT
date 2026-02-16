@@ -406,7 +406,7 @@ let original = {name: "Maneesha",details: { age:21}};
 let copy = deepClone(original);
 console.log(copy);*/
 // Find first non repeating character
-function firstNonRepeating(str){
+/*function firstNonRepeating(str){
     let freq = {};
     for (let char of str){
         freq[char] = (freq[char] || 0) + 1;
@@ -418,4 +418,10 @@ function firstNonRepeating(str){
     }
     return null;
 }
-console.log(firstNonRepeating("aabbcdde"));
+console.log(firstNonRepeating("aabbcdde"));*/
+// Rotate Array by K Positions
+function rotateArray(arr,k){
+    k = k % arr.length;
+    return arr.slice(-k).concat(arr.slice(0, -k));
+}
+console.log(rotateArray([1,2,3,4,5],2));
