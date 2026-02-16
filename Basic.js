@@ -420,8 +420,20 @@ console.log(copy);*/
 }
 console.log(firstNonRepeating("aabbcdde"));*/
 // Rotate Array by K Positions
-function rotateArray(arr,k){
+/*function rotateArray(arr,k){
     k = k % arr.length;
     return arr.slice(-k).concat(arr.slice(0, -k));
 }
-console.log(rotateArray([1,2,3,4,5],2));
+console.log(rotateArray([1,2,3,4,5],2));*/
+// Longest word in a Sentence
+function longestWord(sentence){
+    let words = sentence.split(" ");
+    let longest = "";
+    for(let word of words){
+        if(word.length > longest.length){
+            longest = word;
+        }
+    }
+    return longest;
+}
+console.log(longestWord("JavaScript is very powerful language"));
