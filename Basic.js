@@ -405,3 +405,17 @@ console.log(flattenArray([1,[2,[3,4]],5]));*/
 let original = {name: "Maneesha",details: { age:21}};
 let copy = deepClone(original);
 console.log(copy);*/
+// Find first non repeating character
+function firstNonRepeating(str){
+    let freq = {};
+    for (let char of str){
+        freq[char] = (freq[char] || 0) + 1;
+    }
+    for (let char of str){
+        if(freq[char] === 1){
+            return char;
+        }
+    }
+    return null;
+}
+console.log(firstNonRepeating("aabbcdde"));
