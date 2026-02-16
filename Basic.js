@@ -426,7 +426,7 @@ console.log(firstNonRepeating("aabbcdde"));*/
 }
 console.log(rotateArray([1,2,3,4,5],2));*/
 // Longest word in a Sentence
-function longestWord(sentence){
+/*function longestWord(sentence){
     let words = sentence.split(" ");
     let longest = "";
     for(let word of words){
@@ -436,4 +436,20 @@ function longestWord(sentence){
     }
     return longest;
 }
-console.log(longestWord("JavaScript is very powerful language"));
+console.log(longestWord("JavaScript is very powerful language"));*/
+// Check Balanced Paranthesis
+function isBalanced(str){
+    let stack = [];
+    for(let char of str){
+        if(char === "("){
+            stack.push(char);
+        }
+        else if( char === ")"){
+            if(stack.length === 0) return false;
+            stack.pop();
+        }
+    }
+    return stack.length === 0;
+}
+console.log(isBalanced("((()))"));
+console.log(isBalanced("(()"));
