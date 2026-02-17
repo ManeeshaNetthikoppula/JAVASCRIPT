@@ -474,9 +474,18 @@ console.log(intersection([1,2,3,4],[3,4,5,6]));*/
 }
 console.log(findDuplicates([1,2,3,2,4,5,1]));*/
 // Move all Zeroes to End
-function moveZeros(arr){
+/*function moveZeros(arr){
     let nonZeros = arr.filter(num => num !==0);
     let zeros = arr.filter(num => num ===0);
     return [...nonZeros, ...zeros];
 }
-console.log(moveZeros([0,1,0,3,12]));
+console.log(moveZeros([0,1,0,3,12]));*/
+// 8. Find Power Without Using Math.pow()
+function power(base,exp){
+    let result = 1;
+    for(let i = 0;i < exp;i++){
+        result *= base;
+    }
+    return result;
+}
+console.log(power(2,5));
