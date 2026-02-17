@@ -454,7 +454,22 @@ console.log(longestWord("JavaScript is very powerful language"));*/
 console.log(isBalanced("((()))"));
 console.log(isBalanced("(()"));*/
 // Find Intersection of Two Arrays
-function intersection(arr1,arr2){
+/*function intersection(arr1,arr2){
     return arr1.filter(value => arr2.includes(value));
 }
-console.log(intersection([1,2,3,4],[3,4,5,6]));
+console.log(intersection([1,2,3,4],[3,4,5,6]));*/
+//Find Duplicate Numbers in Array
+function findDuplicates(arr){
+    let seen = new Set();
+    let duplicates = new Set();
+    for(let num of arr){
+        if(seen.has(num)){
+            duplicates.add(num);
+        }
+        else {
+            seen.add(num);
+        }
+    }
+    return [...duplicates];
+}
+console.log(findDuplicates([1,2,3,2,4,5,1]));
