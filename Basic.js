@@ -481,11 +481,22 @@ console.log(findDuplicates([1,2,3,2,4,5,1]));*/
 }
 console.log(moveZeros([0,1,0,3,12]));*/
 // 8. Find Power Without Using Math.pow()
-function power(base,exp){
+/*function power(base,exp){
     let result = 1;
     for(let i = 0;i < exp;i++){
         result *= base;
     }
     return result;
 }
-console.log(power(2,5));
+console.log(power(2,5));*/
+// Find Maximum SubArray sum
+function maxSubArray(arr){
+    let maxSum = arr[0];
+    let currentSum = arr[0];
+    for (let i = 1; i < arr.length;i++){
+        currentSum = Math.max(arr[i], currentSum + arr[i]);
+        maxSum = Math.max(maxSum, currentSum);
+    }
+    return maxSum;
+}
+console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]));
