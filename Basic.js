@@ -438,7 +438,7 @@ console.log(rotateArray([1,2,3,4,5],2));*/
 }
 console.log(longestWord("JavaScript is very powerful language"));*/
 // Check Balanced Paranthesis
-function isBalanced(str){
+/*function isBalanced(str){
     let stack = [];
     for(let char of str){
         if(char === "("){
@@ -452,4 +452,9 @@ function isBalanced(str){
     return stack.length === 0;
 }
 console.log(isBalanced("((()))"));
-console.log(isBalanced("(()"));
+console.log(isBalanced("(()"));*/
+// Find Intersection of Two Arrays
+function intersection(arr1,arr2){
+    return arr1.filter(value => arr2.includes(value));
+}
+console.log(intersection([1,2,3,4],[3,4,5,6]));
