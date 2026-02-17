@@ -459,7 +459,7 @@ console.log(isBalanced("(()"));*/
 }
 console.log(intersection([1,2,3,4],[3,4,5,6]));*/
 //Find Duplicate Numbers in Array
-function findDuplicates(arr){
+/*function findDuplicates(arr){
     let seen = new Set();
     let duplicates = new Set();
     for(let num of arr){
@@ -472,4 +472,11 @@ function findDuplicates(arr){
     }
     return [...duplicates];
 }
-console.log(findDuplicates([1,2,3,2,4,5,1]));
+console.log(findDuplicates([1,2,3,2,4,5,1]));*/
+// Move all Zeroes to End
+function moveZeros(arr){
+    let nonZeros = arr.filter(num => num !==0);
+    let zeros = arr.filter(num => num ===0);
+    return [...nonZeros, ...zeros];
+}
+console.log(moveZeros([0,1,0,3,12]));
