@@ -490,7 +490,7 @@ console.log(moveZeros([0,1,0,3,12]));*/
 }
 console.log(power(2,5));*/
 // Find Maximum SubArray sum
-function maxSubArray(arr){
+/*function maxSubArray(arr){
     let maxSum = arr[0];
     let currentSum = arr[0];
     for (let i = 1; i < arr.length;i++){
@@ -499,4 +499,21 @@ function maxSubArray(arr){
     }
     return maxSum;
 }
-console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]));
+console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]));*/
+//Given a string, find the length of the longest substring without repeating characters
+function longestUniqueSubstring(str){
+    let set = new Set();
+    let left = 0;
+    let maxLength = 0;
+    for(let right = 0; right < str.length;right++){
+        while (set.has(str[right])){
+            set.delete(str[left]);
+            left++;
+            }
+            set.add(str[right]);
+                maxLength=Math.max(maxLength,right-left+1);
+            }
+            return maxLength;
+        }
+        console.log(longestUniqueSubstring("abcabcbb"));
+    
