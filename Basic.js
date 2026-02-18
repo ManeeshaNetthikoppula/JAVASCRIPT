@@ -517,7 +517,7 @@ console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]));*/
         }
         console.log(longestUniqueSubstring("abcabcbb"));*/
 // Implement your own
-function myPromiseAll(promises) {
+/*function myPromiseAll(promises) {
   return new Promise((resolve, reject) => {
     let results = [];
     let completed = 0;
@@ -535,4 +535,24 @@ function myPromiseAll(promises) {
         .catch(reject);
     });
   });
+}*/
+//
+function flattenObject(obj, parentKey = "", result = {}) {
+  for (let key in obj) {
+    let newKey = parentKey ? `${parentKey}.${key}` : key;
+
+    if (typeof obj[key] === "object" && obj[key] !== null) {
+      flattenObject(obj[key], newKey, result);
+    } else {
+      result[newKey] = obj[key];
+    }
+  }
+  return result;
 }
+
+console.log(flattenObject({
+  user: {
+    name: "Maneesha",
+    address: { city: "Hyd", pin: 500001 }
+  }
+}));
