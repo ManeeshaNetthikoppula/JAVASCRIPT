@@ -537,7 +537,7 @@ console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]));*/
   });
 }*/
 //
-function flattenObject(obj, parentKey = "", result = {}) {
+/*function flattenObject(obj, parentKey = "", result = {}) {
   for (let key in obj) {
     let newKey = parentKey ? `${parentKey}.${key}` : key;
 
@@ -555,4 +555,30 @@ console.log(flattenObject({
     name: "Maneesha",
     address: { city: "Hyd", pin: 500001 }
   }
-}));
+}));*/
+//
+class LRUCache {
+  constructor(limit) {
+    this.limit = limit;
+    this.cache = new Map();
+  }
+
+  get(key) {
+    if (!this.cache.has(key)) return -1;
+
+    let value = this.cache.get(key);
+    this.cache.delete(key);
+    this.cache.set(key, value);
+    return value;
+  }
+
+  put(key, value) {
+    if (this.cache.has(key)) {
+      this.cache.delete(key);
+    } else if (this.cache.size === this.limit) {
+      this.cache.delete(this.cache.keys().next().value);
+    }
+
+    this.cache.set(key, value);
+  }
+}
