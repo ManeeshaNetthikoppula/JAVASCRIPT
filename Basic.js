@@ -501,7 +501,7 @@ console.log(power(2,5));*/
 }
 console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]));*/
 //Given a string, find the length of the longest substring without repeating characters
-function longestUniqueSubstring(str){
+/*function longestUniqueSubstring(str){
     let set = new Set();
     let left = 0;
     let maxLength = 0;
@@ -515,5 +515,24 @@ function longestUniqueSubstring(str){
             }
             return maxLength;
         }
-        console.log(longestUniqueSubstring("abcabcbb"));
-    
+        console.log(longestUniqueSubstring("abcabcbb"));*/
+// Implement your own
+function myPromiseAll(promises) {
+  return new Promise((resolve, reject) => {
+    let results = [];
+    let completed = 0;
+
+    promises.forEach((promise, index) => {
+      Promise.resolve(promise)
+        .then(value => {
+          results[index] = value;
+          completed++;
+
+          if (completed === promises.length) {
+            resolve(results);
+          }
+        })
+        .catch(reject);
+    });
+  });
+}
