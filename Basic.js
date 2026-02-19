@@ -598,6 +598,7 @@ function add(a,b,c){
 const curriedAdd = curry(add);
 console.log(curriedAdd(1)(2)(3));*/
 // Event Emitter
+/*
 class EventEmitter{
     constructor(){
         this.events = {};
@@ -611,4 +612,19 @@ class EventEmitter{
     off(event,listener){
         this.events[event] = (this.events[event]||[]).filter(fn => fn!==listener);
     }
+}*/
+//Throttle function
+function throttle(fn, limit) {
+  let inThrottle = false;
+
+  return function(...args) {
+    if (!inThrottle) {
+      fn.apply(this, args);
+      inThrottle = true;
+
+      setTimeout(() => {
+        inThrottle = false;
+      }, limit);
+    }
+  };
 }
