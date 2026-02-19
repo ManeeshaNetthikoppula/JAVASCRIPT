@@ -536,7 +536,7 @@ console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]));*/
     });
   });
 }*/
-//
+//Fatten Object
 /*function flattenObject(obj, parentKey = "", result = {}) {
   for (let key in obj) {
     let newKey = parentKey ? `${parentKey}.${key}` : key;
@@ -556,8 +556,8 @@ console.log(flattenObject({
     address: { city: "Hyd", pin: 500001 }
   }
 }));*/
-//
-class LRUCache {
+//Implement LRU Cache
+/*class LRUCache {
   constructor(limit) {
     this.limit = limit;
     this.cache = new Map();
@@ -581,4 +581,18 @@ class LRUCache {
 
     this.cache.set(key, value);
   }
+}*/
+//currying Function
+function curry(fn){
+    return function curried(...args){
+        if(args.length >= fn.length){
+            return fn(...args);
+        }
+        return(...next) => curried(...args, ...next);
+    };
 }
+function add(a,b,c){
+    return a +b + c;
+}
+const curriedAdd = curry(add);
+console.log(curriedAdd(1)(2)(3));
