@@ -583,6 +583,7 @@ console.log(flattenObject({
   }
 }*/
 //currying Function
+ /*
 function curry(fn){
     return function curried(...args){
         if(args.length >= fn.length){
@@ -595,4 +596,19 @@ function add(a,b,c){
     return a +b + c;
 }
 const curriedAdd = curry(add);
-console.log(curriedAdd(1)(2)(3));
+console.log(curriedAdd(1)(2)(3));*/
+// Event Emitter
+class EventEmitter{
+    constructor(){
+        this.events = {};
+    }
+    on(event,listener){
+        (this.events[event] ||= []).push(listener);
+    }
+    emit(event, data){
+        (this.events[event] || []).forEach(fn => fn(data));
+    }
+    off(event,listener){
+        this.events[event] = (this.events[event]||[]).filter(fn => fn!==listener);
+    }
+}
