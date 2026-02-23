@@ -651,8 +651,8 @@ function(context, ...args){
         return fn.apply(context, [...args, ...newArgs]);
     };
 };
-//
-function compose(...functions) {
+//compose functions
+/*function compose(...functions) {
   return function(value) {
     return functions.reduceRight((acc, fn) => fn(acc), value);
   };
@@ -662,4 +662,25 @@ const add2 = x => x + 2;
 const multiply3 = x => x * 3;
 
 const result = compose(multiply3, add2);
-console.log(result(5)); // (5+2)*3 = 21
+console.log(result(5)); // (5+2)*3 = 21*/
+
+//Generate All Permutuations of a String
+function permutations(str) {
+  if (str.length <= 1) return [str];
+
+  let result = [];
+
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    let remaining = str.slice(0, i) + str.slice(i + 1);
+
+    for (let perm of permutations(remaining)) {
+      result.push(char + perm);
+    }
+  }
+
+  return result;
+}
+
+console.log(permutations("abc"));
+
