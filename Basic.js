@@ -651,3 +651,15 @@ function(context, ...args){
         return fn.apply(context, [...args, ...newArgs]);
     };
 };
+//
+function compose(...functions) {
+  return function(value) {
+    return functions.reduceRight((acc, fn) => fn(acc), value);
+  };
+}
+
+const add2 = x => x + 2;
+const multiply3 = x => x * 3;
+
+const result = compose(multiply3, add2);
+console.log(result(5)); // (5+2)*3 = 21
