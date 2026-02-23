@@ -665,7 +665,7 @@ const result = compose(multiply3, add2);
 console.log(result(5)); // (5+2)*3 = 21*/
 
 //Generate All Permutuations of a String
-function permutations(str) {
+/*function permutations(str) {
   if (str.length <= 1) return [str];
 
   let result = [];
@@ -682,5 +682,22 @@ function permutations(str) {
   return result;
 }
 
-console.log(permutations("abc"));
+console.log(permutations("abc"));*/
+// Create a Retry Promise Function
+function once(fn) {
+  let called = false;
+  let result;
+
+  return function(...args) {
+    if (!called) {
+      result = fn.apply(this, args);
+      called = true;
+    }
+    return result;
+  };
+}
+
+const init = once(() => console.log("Initialized"));
+init();
+init(); // Won't run again
 
