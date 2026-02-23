@@ -630,7 +630,7 @@ function throttle(fn, limit) {
   };
 }*/
 // Detect cycle in linkedlist
-function hasCycle(head) {
+/*function hasCycle(head) {
   let slow = head;
   let fast = head;
 
@@ -642,4 +642,12 @@ function hasCycle(head) {
   }
 
   return false;
-}
+}*/
+// Implement bind()Method
+Function.prototype.myBind = 
+function(context, ...args){
+    let fn = this;
+    return function(...newArgs){
+        return fn.apply(context, [...args, ...newArgs]);
+    };
+};
