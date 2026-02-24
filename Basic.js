@@ -714,7 +714,7 @@ init(); // Won't run again*/
 }
 console.log(binarySearch([1,2,3,4,5,6]));*/
 //all subarrays
-function allSubarrays(arr) {
+/*function allSubarrays(arr) {
   let result = [];
 
   for (let i = 0; i < arr.length; i++) {
@@ -726,5 +726,19 @@ function allSubarrays(arr) {
   return result;
 }
 
-console.log(allSubarrays([1,2,3]));
+console.log(allSubarrays([1,2,3]));*/
+// set Interval
+function mySetInterval(callback, delay) {
+  let timer = {};
+
+  function repeat() {
+    timer.id = setTimeout(() => {
+      callback();
+      repeat();
+    }, delay);
+  }
+
+  repeat();
+  return timer;
+}
 
