@@ -684,7 +684,7 @@ console.log(result(5)); // (5+2)*3 = 21*/
 
 console.log(permutations("abc"));*/
 // Create a Retry Promise Function
-function once(fn) {
+/*function once(fn) {
   let called = false;
   let result;
 
@@ -695,9 +695,22 @@ function once(fn) {
     }
     return result;
   };
-}
+
 
 const init = once(() => console.log("Initialized"));
 init();
-init(); // Won't run again
+init(); // Won't run again*/
+// Binary Search
+function binarySearch(arr,target){
+    let left = 0;
+    let right = arr.length - 1;
+    while(left <= right){
+        let mid = Math.floor((left+right)/2);
+        if(arr[mid] == target) return mid;
+        else if(arr[mid] < target) left = mid + 1;
+        else right = mid - 1;
+    }
+    return -1;
+}
+console.log(binarySearch([1,2,3,4,5,6]));
 
