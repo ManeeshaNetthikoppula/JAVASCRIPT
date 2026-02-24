@@ -728,7 +728,7 @@ console.log(binarySearch([1,2,3,4,5,6]));*/
 
 console.log(allSubarrays([1,2,3]));*/
 // set Interval
-function mySetInterval(callback, delay) {
+/*function mySetInterval(callback, delay) {
   let timer = {};
 
   function repeat() {
@@ -740,5 +740,31 @@ function mySetInterval(callback, delay) {
 
   repeat();
   return timer;
+}*/
+//Memoization
+function memoize(fn) {
+  let cache = {};
+
+  return function(...args) {
+    let key = JSON.stringify(args);
+
+    if (cache[key]) {
+      return cache[key];
+    }
+
+    let result = fn(...args);
+    cache[key] = result;
+    return result;
+  };
 }
+
+function slowSquare(n) {
+  console.log("Calculating...");
+  return n * n;
+}
+
+const fastSquare = memoize(slowSquare);
+
+console.log(fastSquare(5));
+console.log(fastSquare(5)); 
 
