@@ -701,7 +701,7 @@ const init = once(() => console.log("Initialized"));
 init();
 init(); // Won't run again*/
 // Binary Search
-function binarySearch(arr,target){
+/*function binarySearch(arr,target){
     let left = 0;
     let right = arr.length - 1;
     while(left <= right){
@@ -712,5 +712,19 @@ function binarySearch(arr,target){
     }
     return -1;
 }
-console.log(binarySearch([1,2,3,4,5,6]));
+console.log(binarySearch([1,2,3,4,5,6]));*/
+//all subarrays
+function allSubarrays(arr) {
+  let result = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j <= arr.length; j++) {
+      result.push(arr.slice(i, j));
+    }
+  }
+
+  return result;
+}
+
+console.log(allSubarrays([1,2,3]));
 
