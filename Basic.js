@@ -769,12 +769,21 @@ const fastSquare = memoize(slowSquare);
 console.log(fastSquare(5));
 console.log(fastSquare(5)); */
 // Find the only non-duplicate Number
-function findUnique(arr){
+/*function findUnique(arr){
     let result = 0;
     for(let num of arr){
         result ^= num;
     }
     return result;
 }
-console.log(findUnique([2,3,5,3,2]));
+console.log(findUnique([2,3,5,3,2]));*/
+//Shuffle Array(Fisher-Yates Algorithm)
+function shuffle(arr){
+    for (let i = arr.length-1; i>0; i--){
+        let j = Math.floor(Math.random() * (i+1));
+        [arr[i], arr[j]] = [arr[j],arr[i]];
+    }
+    return arr;
+}
+console.log(shuffle([1,2,3,4,5]))
 
