@@ -742,6 +742,7 @@ console.log(allSubarrays([1,2,3]));*/
   return timer;
 }*/
 //Memoization
+/*
 function memoize(fn) {
   let cache = {};
 
@@ -766,5 +767,14 @@ function slowSquare(n) {
 const fastSquare = memoize(slowSquare);
 
 console.log(fastSquare(5));
-console.log(fastSquare(5)); 
+console.log(fastSquare(5)); */
+// Find the only non-duplicate Number
+function findUnique(arr){
+    let result = 0;
+    for(let num of arr){
+        result ^= num;
+    }
+    return result;
+}
+console.log(findUnique([2,3,5,3,2]));
 
