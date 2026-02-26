@@ -778,12 +778,30 @@ console.log(fastSquare(5)); */
 }
 console.log(findUnique([2,3,5,3,2]));*/
 //Shuffle Array(Fisher-Yates Algorithm)
-function shuffle(arr){
+/*function shuffle(arr){
     for (let i = arr.length-1; i>0; i--){
         let j = Math.floor(Math.random() * (i+1));
         [arr[i], arr[j]] = [arr[j],arr[i]];
     }
     return arr;
 }
-console.log(shuffle([1,2,3,4,5]))
+console.log(shuffle([1,2,3,4,5]))*/
+// Find Longest Consecutive Sequence
+function longestConsecutive(arr){
+let set = new Set(arr);
+let max = 0;
+for(let num of set){
+    if(!set.has(num-1)){
+        let current = num;
+        let count = 1;
+        while(set.has(current+1)){
+            current++;
+            count++;
+        }
+        max = Math.max(max,count);
+    }
+    }
+    return max;
+}
+console.log(longestConsecutive([100,4,200,1,3,2]));
 
