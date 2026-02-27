@@ -828,12 +828,25 @@ console.log(rotateMatrix([
   [7,8,9]
 ]));*/
 //Find First Missing Positive Number
-function firstMissingPositive(arr){
+/*function firstMissingPositive(arr){
     let set = new Set(arr);
     for(let i = 1;i <= arr.length + 1;i++){
         if(!set.has(i)){
             return i;
         }
     }
+} */
+// Find Majority Element
+function majorityElement(arr){
+    let count =0;
+    let candidate = null;
+    for(let num of arr){
+        if(count === 0){
+            candidate = num;
+        }
+        count += (num === candidate) ? 1: -1;
+    }
+    return candidate;
 }
+console.log(majorityElement([3,3,4,2,3,3,5]));
 
