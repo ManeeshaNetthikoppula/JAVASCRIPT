@@ -805,7 +805,7 @@ for(let num of set){
 }
 console.log(longestConsecutive([100,4,200,1,3,2]));*/
 //Rotate Matrix 90 degrees clockwice
-function rotateMatrix(matrix) {
+/*function rotateMatrix(matrix) {
   let n = matrix.length;
 
   for (let i = 0; i < n; i++) {
@@ -826,5 +826,14 @@ console.log(rotateMatrix([
   [1,2,3],
   [4,5,6],
   [7,8,9]
-]));
+]));*/
+//Find First Missing Positive Number
+function firstMissingPositive(arr){
+    let set = new Set(arr);
+    for(let i = 1;i <= arr.length + 1;i++){
+        if(!set.has(i)){
+            return i;
+        }
+    }
+}
 
