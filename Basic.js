@@ -787,7 +787,7 @@ console.log(findUnique([2,3,5,3,2]));*/
 }
 console.log(shuffle([1,2,3,4,5]))*/
 // Find Longest Consecutive Sequence
-function longestConsecutive(arr){
+/*function longestConsecutive(arr){
 let set = new Set(arr);
 let max = 0;
 for(let num of set){
@@ -803,5 +803,28 @@ for(let num of set){
     }
     return max;
 }
-console.log(longestConsecutive([100,4,200,1,3,2]));
+console.log(longestConsecutive([100,4,200,1,3,2]));*/
+//Rotate Matrix 90 degrees clockwice
+function rotateMatrix(matrix) {
+  let n = matrix.length;
+
+  for (let i = 0; i < n; i++) {
+    for (let j = i; j < n; j++) {
+      [matrix[i][j], matrix[j][i]] =
+      [matrix[j][i], matrix[i][j]];
+    }
+  }
+
+  for (let row of matrix) {
+    row.reverse();
+  }
+
+  return matrix;
+}
+
+console.log(rotateMatrix([
+  [1,2,3],
+  [4,5,6],
+  [7,8,9]
+]));
 
