@@ -874,7 +874,7 @@ console.log(findPairs([1,2,3,4,5],6));*/
 }
 console.log(toBinary(10));*/
 // Find Peak Element
-function findPeak(arr){
+/*(function findPeak(arr){
     for(let i = 0;i < arr.length; i++){
         if(
             (i === 0 || arr[i-1]) &&
@@ -884,4 +884,17 @@ function findPeak(arr){
         }
     }
 }
-console.log(findPeak([1,3,20,4,1]));
+console.log(findPeak([1,3,20,4,1]));*/
+// 10. Find Missing Letters in Alphabet
+function missingLetters(str){
+    let result = [];
+    for(let i = 0; i < str.length - 1; i++){
+        let current = str.charCodeAt(i);
+        let next = str.charCodeAt(i + 1);
+        for(let j = current + 1; j < next; j++){
+            result.push(String.fromCharCode(j));
+        }
+    }
+    return result;
+}
+console.log(missingLetters("abdf"));
