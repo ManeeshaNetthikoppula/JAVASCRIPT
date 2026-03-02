@@ -837,7 +837,7 @@ console.log(rotateMatrix([
     }
 } */
 // Find Majority Element
-function majorityElement(arr){
+/*function majorityElement(arr){
     let count =0;
     let candidate = null;
     for(let num of arr){
@@ -848,5 +848,19 @@ function majorityElement(arr){
     }
     return candidate;
 }
-console.log(majorityElement([3,3,4,2,3,3,5]));
+console.log(majorityElement([3,3,4,2,3,3,5]));*/
+//Find all pairs  with given sum
+function findPairs(arr, target){
+    let set = new Set();
+    let result =[];
+    for(let num of arr){
+        let complement =target - num;
+        if(set.has(complement)){
+            result.push([complement, num]);
+        }
+        set.add(num);
+    }
+    return result;
+}
+console.log(findPairs([1,2,3,4,5],6));
 
