@@ -850,7 +850,7 @@ console.log(rotateMatrix([
 }
 console.log(majorityElement([3,3,4,2,3,3,5]));*/
 //Find all pairs  with given sum
-function findPairs(arr, target){
+/*function findPairs(arr, target){
     let set = new Set();
     let result =[];
     for(let num of arr){
@@ -862,5 +862,14 @@ function findPairs(arr, target){
     }
     return result;
 }
-console.log(findPairs([1,2,3,4,5],6));
-
+console.log(findPairs([1,2,3,4,5],6));*/
+//Convert number to binary
+function toBinary(num){
+    let binary = "";
+    while(num > 0){
+        binary = (num % 2) + binary;
+        num = Math.floor(num/2);
+    }
+    return binary;
+}
+console.log(toBinary(10));
