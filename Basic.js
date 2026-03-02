@@ -864,7 +864,7 @@ console.log(majorityElement([3,3,4,2,3,3,5]));*/
 }
 console.log(findPairs([1,2,3,4,5],6));*/
 //Convert number to binary
-function toBinary(num){
+/*function toBinary(num){
     let binary = "";
     while(num > 0){
         binary = (num % 2) + binary;
@@ -872,4 +872,16 @@ function toBinary(num){
     }
     return binary;
 }
-console.log(toBinary(10));
+console.log(toBinary(10));*/
+// Find Peak Element
+function findPeak(arr){
+    for(let i = 0;i < arr.length; i++){
+        if(
+            (i === 0 || arr[i-1]) &&
+            (i === arr.length - 1 || arr[i] > arr[i+1])
+        ){
+            return arr[i];
+        }
+    }
+}
+console.log(findPeak([1,3,20,4,1]));
