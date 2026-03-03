@@ -886,7 +886,7 @@ console.log(toBinary(10));*/
 }
 console.log(findPeak([1,3,20,4,1]));*/
 // 10. Find Missing Letters in Alphabet
-function missingLetters(str){
+/*function missingLetters(str){
     let result = [];
     for(let i = 0; i < str.length - 1; i++){
         let current = str.charCodeAt(i);
@@ -897,4 +897,5 @@ function missingLetters(str){
     }
     return result;
 }
-console.log(missingLetters("abdf"));
+console.log(missingLetters("abdf"));*/
+
