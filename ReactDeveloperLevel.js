@@ -45,7 +45,7 @@ function InfiniteScroll(){
         )
     }*/
 // 4. Build Your Own useLocalStorage Hook
-import { useState } from "react";
+/*import { useState } from "react";
 function useLocalStorage(key, initialValue) {
     const[value, setValue] = useState(() =>{
         const stored = localStorage.getItem(key);
@@ -56,5 +56,11 @@ function useLocalStorage(key, initialValue) {
         localStorage.setItem(key,JSON, stringify(newValue));
     };
     return [ value, setStoredValue];
-}
+} */
+// 5.Optimize Re-renders 9(child component rerenders unnecessarily)
+const child = React.memo(({ count }) => {
+    console.log("Child Rendered");
+    return <h2>{count}</h2>
+});
+
 
