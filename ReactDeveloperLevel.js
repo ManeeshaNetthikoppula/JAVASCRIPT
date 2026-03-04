@@ -20,7 +20,7 @@ function usePrevious(value){
     return ref.current;
 }*/
 // 3. Infinite Scroll Component
-import { useEffect, useState } from "react";
+/*import { useEffect, useState } from "react";
 function InfiniteScroll(){
     cont [DataTransferItemList, setItems] = useState([]);
     const[ page, setPage]= useState(1);
@@ -43,4 +43,18 @@ function InfiniteScroll(){
                 {items.map(items => <p key={items.id}>{items.title}</p>)}
             </div>
         )
-    }
+    }*/
+// 4. Build Your Own useLocalStorage Hook
+import { useState } from "react";
+function useLocalStorage(key, initialValue) {
+    const[value, setValue] = useState(() =>{
+        const stored = localStorage.getItem(key);
+        return stored ? JSON.parse(stored) : initialValue;
+    });
+    const setStoredValue = newValue => {
+        setValue(newValue);
+        localStorage.setItem(key,JSON, stringify(newValue));
+    };
+    return [ value, setStoredValue];
+}
+
