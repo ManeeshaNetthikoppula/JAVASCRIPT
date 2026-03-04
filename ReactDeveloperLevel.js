@@ -58,9 +58,22 @@ function useLocalStorage(key, initialValue) {
     return [ value, setStoredValue];
 } */
 // 5.Optimize Re-renders 9(child component rerenders unnecessarily)
-const child = React.memo(({ count }) => {
+/*const child = React.memo(({ count }) => {
     console.log("Child Rendered");
     return <h2>{count}</h2>
-});
+});*/
+
+// 6. Build a Model Without Library
+function Modal({ isOpen, onClose, children }){
+    if(!isOpen) return null;
+    return (
+        <div className="overlay">
+            <div className="modal">
+            {children}
+            <button onClick = {onClose}> Close</button>
+        </div>
+        </div>
+    );
+}
 
 
