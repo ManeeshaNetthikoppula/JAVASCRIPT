@@ -123,3 +123,5 @@ function useAppContext(){
     }*/
 // 10. Build a Controlled vs Uncontrolled Input Example
 <input value = {value} onChange={e => setValue(e.target.value)}/>
+const ref = useRef();
+<input ref = {ref }/>
