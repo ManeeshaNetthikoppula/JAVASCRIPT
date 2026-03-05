@@ -76,7 +76,7 @@ function useLocalStorage(key, initialValue) {
     );
 }*/
 // 7. Implement Form Validation Without Library
-function Form(){
+/*function Form(){
     const [email, setEmail] = useState("");
     const [error, setError] = UseState("");
     function validate(){
@@ -94,6 +94,21 @@ function Form(){
         {error && <p>{error}</p>}
         </>
     );
+}*/
+// 8. Build a Simple Global State(Without Redux)
+import { createContext, useContext, useState}
+from "react";
+const AppContext= createContext();
+function AppProvider({ children }){
+    const [user, setUser] = useState(null);
+    return (
+        <AppContext.Provider value = {{ user, setUser}}>
+            {children}
+        </AppContext.Provider>
+    );
+}
+function useAppContext(){
+    return useContext(AppContext);
 }
 
 
