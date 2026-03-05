@@ -111,7 +111,7 @@ function useAppContext(){
     return useContext(AppContext);
 }*/
 // 9. Build a Timer With Cleanup
-import{ useEffect, useState  from "react";
+/*import{ useEffect, useState  from "react";
     function Timer(){
         const [count, setCount] = useState(0);
         useEffect(() => {
@@ -120,4 +120,6 @@ import{ useEffect, useState  from "react";
                 return () => clearInterval(id);
             },[]);
         return <h1>{count}</h1>;
-    }
+    }*/
+// 10. Build a Controlled vs Uncontrolled Input Example
+<input value = {value} onChange={e => setValue(e.target.value)}/>
