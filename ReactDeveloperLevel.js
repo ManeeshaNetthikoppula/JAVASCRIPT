@@ -96,7 +96,7 @@ function useLocalStorage(key, initialValue) {
     );
 }*/
 // 8. Build a Simple Global State(Without Redux)
-import { createContext, useContext, useState}
+/*import { createContext, useContext, useState}
 from "react";
 const AppContext= createContext();
 function AppProvider({ children }){
@@ -109,6 +109,15 @@ function AppProvider({ children }){
 }
 function useAppContext(){
     return useContext(AppContext);
-}
-
-
+}*/
+// 9. Build a Timer With Cleanup
+import{ useEffect, useState  from "react";
+    function Timer(){
+        const [count, setCount] = useState(0);
+        useEffect(() => {
+            const id = setInterval(() =>{
+                setCount(prev => prev +1);},1000);
+                return () => clearInterval(id);
+            },[]);
+        return <h1>{count}</h1>;
+    }
