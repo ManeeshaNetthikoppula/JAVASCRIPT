@@ -64,7 +64,7 @@ function useLocalStorage(key, initialValue) {
 });*/
 
 // 6. Build a Model Without Library
-function Modal({ isOpen, onClose, children }){
+/*function Modal({ isOpen, onClose, children }){
     if(!isOpen) return null;
     return (
         <div className="overlay">
@@ -73,6 +73,26 @@ function Modal({ isOpen, onClose, children }){
             <button onClick = {onClose}> Close</button>
         </div>
         </div>
+    );
+}*/
+// 7. Implement Form Validation Without Library
+function Form(){
+    const [email, setEmail] = useState("");
+    const [error, setError] = UseState("");
+    function validate(){
+        if(!email.includes("@")){
+            setError("Invalid Email");
+        }
+        else{
+            setError("");
+        }
+    }
+    return (
+        <>
+        input value = {email} onChange={e => setEmail(e.target.value)}/>
+        <button onClick= {validate}>submit</button>
+        {error && <p>{error}</p>}
+        </>
     );
 }
 
