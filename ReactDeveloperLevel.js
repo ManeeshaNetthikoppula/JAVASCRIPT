@@ -63,6 +63,8 @@ function useLocalStorage(key, initialValue) {
     return <h2>{count}</h2>
 });*/
 
+const { useCallback } = require("react");
+
 // 6. Build a Model Without Library
 /*function Modal({ isOpen, onClose, children }){
     if(!isOpen) return null;
@@ -126,7 +128,7 @@ function useAppContext(){
 const ref = useRef();
 <input ref = {ref }/>*/
 //  1.Prevent Unnecessary Re-enders with React.memo
-const Child = React.memo(({ name }) => {
+/*const Child = React.memo(({ name }) => {
     console.log("Child Rendered");
     return <h2>{name}</h2>
 });
@@ -138,4 +140,8 @@ function App(){
             <button onClick ={() => setCount(count + 1)}>Increment</button>
         </div>
     )
-}
+}*/
+// 2. Optimize Functions with useCallback
+const handleClick = useCallback(() =>{
+    console.log("Clicked");
+},[]);
