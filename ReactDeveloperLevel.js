@@ -122,6 +122,11 @@ function useAppContext(){
         return <h1>{count}</h1>;
     }*/
 // 10. Build a Controlled vs Uncontrolled Input Example
-<input value = {value} onChange={e => setValue(e.target.value)}/>
+/*<input value = {value} onChange={e => setValue(e.target.value)}/>
 const ref = useRef();
-<input ref = {ref }/>
+<input ref = {ref }/>*/
+//  1.Prevent Unnecessary Re-enders with React.memo
+const Child = React.memo(({ name }) => {
+    console.log("Child Rendered");
+    return <h2>{name}</h2>
+});
