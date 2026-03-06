@@ -130,3 +130,12 @@ const Child = React.memo(({ name }) => {
     console.log("Child Rendered");
     return <h2>{name}</h2>
 });
+function App(){
+    const[count,setCount] = React.useState(0);
+    return (
+        <div>
+            <child name = "Maneesha" />
+            <button onClick ={() => setCount(count + 1)}>Increment</button>
+        </div>
+    )
+}
