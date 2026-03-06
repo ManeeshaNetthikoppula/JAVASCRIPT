@@ -145,3 +145,7 @@ function App(){
 const handleClick = useCallback(() =>{
     console.log("Clicked");
 },[]);
+const Child = React.memo(( onClick }) => {
+    console.log("Child Render");
+    return <button onClick= {onClick} > Click</button>;
+});
