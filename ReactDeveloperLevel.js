@@ -155,3 +155,6 @@ const ExpensiveCalculation = (num) =>{
     for(let i = 0;i < 1000000000; i++){}
     return num * 2;
 };
+//Solution:
+const result = useMemo(() =>
+ExpensiveCalculation(number), [number]);
