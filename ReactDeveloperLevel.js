@@ -159,7 +159,7 @@ const Child = React.memo(({ onClick }) => {
 const result = useMemo(() =>
 ExpensiveCalculation(number), [number]);*/
 // 4. Virtualizing Large Lists
-import { FixedSizeList } from "react-window";
+/*import { FixedSizeList } from "react-window";
 function List({ items }){
     return (
         <FixedSizeList
@@ -172,4 +172,9 @@ function List({ items }){
             )}
         </FixedSizeList>
     );
-}
+}*/
+// 5. Debouncing Search Inputs
+const debouncedSearch = useMemo(
+    () => debounce(searchFunction, 500),
+    []
+);
