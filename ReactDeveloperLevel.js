@@ -150,11 +150,26 @@ const Child = React.memo(({ onClick }) => {
     return <button onClick= {onClick} > Click</button>;
 });*/
 //  Expensive Calculation Optimization(useMemo)
-const ExpensiveCalculation = (num) =>{
+/*const ExpensiveCalculation = (num) =>{
     console.log("Calculating...");
     for(let i = 0;i < 1000000000; i++){}
     return num * 2;
 };
 //Solution:
 const result = useMemo(() =>
-ExpensiveCalculation(number), [number]);
+ExpensiveCalculation(number), [number]);*/
+// 4. Virtualizing Large Lists
+import { FixedSizeList } from "react-window";
+function List({ items }){
+    return (
+        <FixedSizeList
+        height={400}
+        width={300}
+        itemSize = {35}
+        itemCount = {items.length}>
+            {({ index,style }) => (
+                <div style = {style} > {items[index]}</div>
+            )}
+        </FixedSizeList>
+    );
+}
