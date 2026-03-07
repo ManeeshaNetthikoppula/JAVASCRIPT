@@ -142,10 +142,16 @@ function App(){
     )
 }*/
 // 2. Optimize Functions with useCallback
-const handleClick = useCallback(() =>{
+/*const handleClick = useCallback(() =>{
     console.log("Clicked");
 },[]);
-const Child = React.memo(( onClick }) => {
+const Child = React.memo(({ onClick }) => {
     console.log("Child Render");
     return <button onClick= {onClick} > Click</button>;
-});
+});*/
+//  Expensive Calculation Optimization(useMemo)
+const ExpensiveCalculation = (num) =>{
+    console.log("Calculating...");
+    for(let i = 0;i < 1000000000; i++){}
+    return num * 2;
+};
