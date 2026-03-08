@@ -189,5 +189,10 @@ function List({ items }){
 /*const style ={ color: "red"};
 <Component style= {style} />*/
 // 9. Avoid State Updates in Loops
-setCount(10);
+/*setCount(10);*/
+// 10. Use Key Correctly in  Lists
+items.map(items =>(
+    <div key = {items.id}>{items.name}</div>
+));
+
 
