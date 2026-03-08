@@ -179,7 +179,9 @@ function List({ items }){
     []
 );*/
 // 6.Lazy Loading Components
-const Dashboard = React.lazy(() => import(" ./ Dashboard"));
+/*const Dashboard = React.lazy(() => import(" ./ Dashboard"));
 <Suspense fallback= {<div>Loading...</div>}>
 <Dashboard/>
-</Suspense>
+</Suspense>*/
+// 7. Code Splitting
+const Settings = React.lazy(() => import("./ Settings"));
