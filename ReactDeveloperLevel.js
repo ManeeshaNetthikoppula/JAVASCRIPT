@@ -174,7 +174,9 @@ function List({ items }){
     );
 }*/
 // 5. Debouncing Search Inputs
-const debouncedSearch = useMemo(
+/*const debouncedSearch = useMemo(
     () => debounce(searchFunction, 500),
     []
-);
+);*/
+// 6.Lazy Loading Components
+const Dashboard = React.lazy(() => import(" ./ Dashboard"));
