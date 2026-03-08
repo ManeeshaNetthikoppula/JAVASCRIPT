@@ -63,7 +63,7 @@ function useLocalStorage(key, initialValue) {
     return <h2>{count}</h2>
 });*/
 
-const { useCallback, Suspense } = require("react");
+const { useCallback, Suspense, Component } = require("react");
 
 // 6. Build a Model Without Library
 /*function Modal({ isOpen, onClose, children }){
@@ -184,4 +184,8 @@ function List({ items }){
 <Dashboard/>
 </Suspense>*/
 // 7. Code Splitting
-const Settings = React.lazy(() => import("./ Settings"));
+/*const Settings = React.lazy(() => import("./ Settings"));*/
+// 8. Avoid Inline Objects
+const style ={ color: "red"};
+<Component style= {style} />
+
