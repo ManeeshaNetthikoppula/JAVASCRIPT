@@ -63,7 +63,7 @@ function useLocalStorage(key, initialValue) {
     return <h2>{count}</h2>
 });*/
 
-const { useCallback } = require("react");
+const { useCallback, Suspense } = require("react");
 
 // 6. Build a Model Without Library
 /*function Modal({ isOpen, onClose, children }){
@@ -180,3 +180,6 @@ function List({ items }){
 );*/
 // 6.Lazy Loading Components
 const Dashboard = React.lazy(() => import(" ./ Dashboard"));
+<Suspense fallback= {<div>Loading...</div>}>
+<Dashboard/>
+</Suspense>
