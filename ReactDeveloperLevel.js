@@ -186,6 +186,8 @@ function List({ items }){
 // 7. Code Splitting
 /*const Settings = React.lazy(() => import("./ Settings"));*/
 // 8. Avoid Inline Objects
-const style ={ color: "red"};
-<Component style= {style} />
+/*const style ={ color: "red"};
+<Component style= {style} />*/
+// 9. Avoid State Updates in Loops
+setCount(10);
 
