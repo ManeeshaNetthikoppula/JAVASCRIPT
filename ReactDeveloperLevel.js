@@ -215,7 +215,7 @@ function LeadList({ leads }){
     );
 }*/
 // 2. Memoize Table Rows
-const LeadRow = React.memo(({ lead }) => {
+/*const LeadRow = React.memo(({ lead }) => {
     return (
         <tr>
             <td>{lead.name}</td>
@@ -223,4 +223,6 @@ const LeadRow = React.memo(({ lead }) => {
             <td>{lead.status}</td>  
         </tr>   
     );
-});
+});*/
+// 3.Debounce Search in Dashboard
+const debouncedSearch = useDebounce(searchFunction, 500);
