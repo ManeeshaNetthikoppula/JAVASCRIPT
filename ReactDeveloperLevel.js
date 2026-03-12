@@ -191,8 +191,26 @@ function List({ items }){
 // 9. Avoid State Updates in Loops
 /*setCount(10);*/
 // 10. Use Key Correctly in  Lists
-items.map(items =>(
+/*items.map(items =>(
     <div key = {items.id}>{items.name}</div>
-));
-
-
+));*/
+// React performance optimization techniques:
+// 1. Optimize Large Tables
+// => problem: Rendering 1000+ rows makes the dashboard slow.Solution ->Virtualization
+import{ FixedSizeList } from "react-window";
+function LeadList({ leads }){
+    return(
+        <FixedSizeList
+            height={400}
+            width={300}
+            itemSize={35}
+            itemCount={leads.length}
+        >
+            {({ index, style }) => (
+                <div style={style}>
+                    {leads[index].name}
+                </div>
+            )}
+        </FixedSizeList>
+    );
+}
