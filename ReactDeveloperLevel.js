@@ -197,7 +197,7 @@ function List({ items }){
 // React performance optimization techniques:
 // 1. Optimize Large Tables
 // => problem: Rendering 1000+ rows makes the dashboard slow.Solution ->Virtualization
-import{ FixedSizeList } from "react-window";
+/*import{ FixedSizeList } from "react-window";
 function LeadList({ leads }){
     return(
         <FixedSizeList
@@ -213,4 +213,14 @@ function LeadList({ leads }){
             )}
         </FixedSizeList>
     );
-}
+}*/
+// 2. Memoize Table Rows
+const LeadRow = React.memo(({ lead }) => {
+    return (
+        <tr>
+            <td>{lead.name}</td>
+            <td>{lead.email}</td>
+            <td>{lead.status}</td>  
+        </tr>   
+    );
+});
