@@ -228,5 +228,9 @@ function LeadList({ leads }){
 /*const debouncedSearch = useDebounce(searchFunction, 500);*/
 // 4. Lazy Load Dashboard Pages
 /*const Analytics = React.lazy(() => import("./Analytics"));*/
-<Suspense fallback={<div>Loading...</div>}>
-<Analytics/></Suspense>
+/*<Suspense fallback={<div>Loading...</div>}>
+<Analytics/></Suspense>*/
+// 5. Prevent Sidebar Re-render
+const Sidebar = React.memo(() => {
+    return<div>Sidebar Content</div>;
+});
