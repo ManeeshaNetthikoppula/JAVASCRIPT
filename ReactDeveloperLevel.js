@@ -227,4 +227,6 @@ function LeadList({ leads }){
 // 3.Debounce Search in Dashboard
 /*const debouncedSearch = useDebounce(searchFunction, 500);*/
 // 4. Lazy Load Dashboard Pages
-const Analytics = React.lazy(() => import("./Analytics"));
+/*const Analytics = React.lazy(() => import("./Analytics"));*/
+<Suspense fallback={<div>Loading...</div>}>
+<Analytics/></Suspense>
