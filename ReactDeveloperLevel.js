@@ -231,6 +231,8 @@ function LeadList({ leads }){
 /*<Suspense fallback={<div>Loading...</div>}>
 <Analytics/></Suspense>*/
 // 5. Prevent Sidebar Re-render
-const Sidebar = React.memo(() => {
+/*const Sidebar = React.memo(() => {
     return<div>Sidebar Content</div>;
-});
+});*/
+// 6. Cache API Data
+const{ data } = useQuery("leads", fetchLeads);
